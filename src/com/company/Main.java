@@ -10,6 +10,8 @@ public class Main {
         long d = 25642101L;
         float e = 1.568f;
         double j = 2.5689412;
+        char ch = 'A';
+        boolean k = true;
 
         // solution2
         float boxerWeight1 = 78.2f;
@@ -22,13 +24,13 @@ public class Main {
         // solution3
         int bananasAmount = 5;
         int bananasWeight = 80;
-        int milkAmount = 2;
-        int milkWeight = 105;
+        int milkVolumeMl = 200;
+        int milkWeightPer100Ml = 105;
         int iceCreamAmount = 2;
         int iceCreamWeight = 100;
         int eggsAmount = 4;
         int eggsWeight = 70;
-        int sumWeightInGram = bananasAmount * bananasWeight + milkAmount * milkWeight + iceCreamAmount * iceCreamWeight + eggsAmount * eggsWeight;
+        int sumWeightInGram = bananasAmount * bananasWeight + (milkVolumeMl / 100) * milkWeightPer100Ml + iceCreamAmount * iceCreamWeight + eggsAmount * eggsWeight;
         float sumWeightInKilogram = (float) sumWeightInGram / 1000;
         System.out.println(sumWeightInKilogram);
 
@@ -50,10 +52,10 @@ public class Main {
         float moneyDenis = 83_690f;
         float moneyCris = 76_230f;
         int percent = 10;
-        float percentF = (float) percent / 100;
-        float newMoneyMasha = moneyMasha + moneyMasha * percentF;
-        float newMoneyDenis = moneyDenis + moneyDenis * percentF;
-        float newMoneyCris = moneyCris + moneyCris * percentF;
+        float multiplyCoefficient = (float) percent / 100;
+        float newMoneyMasha = moneyMasha * (1 + multiplyCoefficient);
+        float newMoneyDenis = moneyDenis * (1 + multiplyCoefficient);
+        float newMoneyCris = moneyCris * (1 + multiplyCoefficient);
         int months = 12;
         float moneyMashaInYear = moneyMasha * months;
         float moneyDenisInYear = moneyDenis * months;
